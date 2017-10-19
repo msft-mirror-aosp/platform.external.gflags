@@ -1,32 +1,18 @@
-cc_defaults {
-    name: "libgflags_defaults",
+cc_library_static {
+    name: "libgflags",
     host_supported: true,
     srcs: [
         "src/gflags.cc",
+        "src/gflags_completions.cc",
         "src/gflags_reporting.cc",
     ],
     cflags: [
         "-D__STDC_FORMAT_MACROS",
 	"-DHAVE_INTTYPES_H",
 	"-DHAVE_SYS_STAT_H",
+        "-DHAVE_PTHREAD",
     ],
     export_include_dirs: [
         "android",
     ],
-}
-
-cc_library_static {
-    name: "libgflags",
-    cflags: [
-        "-DHAVE_PTHREAD",
-    ],
-    defaults: [ "libgflags_defaults" ],
-}
-
-cc_library_static {
-    name: "libgflags_nothreads",
-    cflags: [
-        "-DNO_THREADS",
-    ],
-    defaults: [ "libgflags_defaults" ],
 }
