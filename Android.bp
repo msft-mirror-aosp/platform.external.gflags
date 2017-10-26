@@ -8,9 +8,11 @@ cc_library_static {
     ],
     cflags: [
         "-D__STDC_FORMAT_MACROS",
-	"-DHAVE_INTTYPES_H",
-	"-DHAVE_SYS_STAT_H",
+        "-DHAVE_INTTYPES_H",
+        "-DHAVE_SYS_STAT_H",
         "-DHAVE_PTHREAD",
+        "-Wall",
+        "-Werror",
     ],
     export_include_dirs: [
         "android",
