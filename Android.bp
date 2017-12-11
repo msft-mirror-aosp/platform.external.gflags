@@ -1,6 +1,7 @@
 cc_library_static {
     name: "libgflags",
     host_supported: true,
+    vendor_available: true,
     srcs: [
         "src/gflags.cc",
         "src/gflags_completions.cc",
