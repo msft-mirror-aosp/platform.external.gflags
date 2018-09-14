@@ -1,4 +1,4 @@
-cc_library_static {
+cc_library {
     name: "libgflags",
     host_supported: true,
     vendor_available: true,
