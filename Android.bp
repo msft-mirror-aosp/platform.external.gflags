@@ -21,4 +21,9 @@ cc_library {
     export_include_dirs: [
         "android",
     ],
+    static: {
+        apex_available: [
+            "com.android.gki.*",
+        ],
+    },
 }
