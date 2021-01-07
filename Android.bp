@@ -27,6 +27,7 @@ cc_library {
     static: {
         apex_available: [
             "com.android.gki.*",
+            "com.android.virt",
         ],
     },
 }
