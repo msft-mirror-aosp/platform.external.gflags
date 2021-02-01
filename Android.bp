@@ -4,6 +4,8 @@ cc_library {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
     srcs: [
         "src/gflags.cc",
         "src/gflags_completions.cc",
@@ -25,6 +27,7 @@ cc_library {
     static: {
         apex_available: [
             "com.android.gki.*",
+            "com.android.virt",
         ],
     },
 }
